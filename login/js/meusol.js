@@ -215,5 +215,5 @@ function validate() {
 }
 
 function alerta() {
-    swal("Porra, Melesma!", "Ta de brincadeira que você não sabe, cabeção! Dica: Nossa data")
+    swal("Porra, Melesma!", "Ta de brincadeira que você não sabe, cabeção! Dica: data")
 }
