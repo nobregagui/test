@@ -32,13 +32,13 @@
 	</head>
 	<body class="loading">
 		<!-- Música de Fundo -->
-        <audio id="meuAudio" src="assets/audio/MeuSol.mp3" controls autoplay loop></audio>
-		<div id="wrapper">
+		<div>
 			<div id="bg"></div>
 			<div id="overlay"></div>
 			<div id="main">
                 <!-- Header -->
 				<header id="header">
+					<audio src="assets/audio/MeuSol.mp3" controls autoplay loop></audio>
 				    <h1>Obrigado, minha gostosa!</h1>
 				    <p>"Loira do olho claro, linda e gostosa pra caralho"</p>
 				    <p>"Do jeito que me irrita e me deixa apaixonado!"</p>
@@ -54,21 +54,6 @@
 			window.onload = function() { document.body.className = ''; }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
-			var meuAudio = document.getElementById("meuAudio");
-
-			// Verificar se o dispositivo é móvel
-			var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-			if (isMobile) {
-			// Adicionar um evento de clique na página
-			document.addEventListener("click", function() {
-				meuAudio.play();
-			});
-			} else {
-			// Se não for um dispositivo móvel, reproduza automaticamente
-			meuAudio.autoplay = true;
-			meuAudio.play();
-			}
 		</script>
 	</body>
 </html>

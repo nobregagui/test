@@ -32,13 +32,13 @@
 	</head>
 	<body class="loading">
 		<!-- Música de Fundo -->
-        <audio id="meuAudio" src="assets/audio/MeEncantou.mp3" controls autoplay loop></audio>
 		<div id="wrapper">
 			<div id="bg"></div>
 			<div id="overlay"></div>
 			<div id="main">
 				<!-- Header -->
 				<header id="header">
+					<audio src="assets/audio/MeEncantou.mp3" controls autoplay loop></audio>
 				    <h1>Vai la em casa hoje?</h1>
 				    <p>"Bebi umas comigo?"</p>
 				    <p>"Saudades de ontem, de você beijando pra baixo do meu umbigo"</p>
@@ -57,21 +57,6 @@
 			window.onload = function() { document.body.className = ''; }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
-			var meuAudio = document.getElementById("meuAudio");
-
-			// Verificar se o dispositivo é móvel
-			var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-			if (isMobile) {
-			// Adicionar um evento de clique na página
-			document.addEventListener("click", function() {
-				meuAudio.play();
-			});
-			} else {
-			// Se não for um dispositivo móvel, reproduza automaticamente
-			meuAudio.autoplay = true;
-			meuAudio.play();
-			}
 		</script>
 	</body>
 </html>

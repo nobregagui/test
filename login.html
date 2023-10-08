@@ -48,31 +48,7 @@
 	</head>
 	<body>
 		<!-- Música de Fundo -->
-		<audio id="meuAudio" src="assets/audio/Lennon.mp3" controls autoplay loop></audio>
-		<script>
-		$(document).ready(function(c) {
-			$('.close').on('click', function(c){
-				$('.login-form').fadeOut('slow', function(c){
-	  				$('.login-form').remove();
-				});
-			});
-		});
-		var meuAudio = document.getElementById("meuAudio");
-
-		// Verificar se o dispositivo é móvel
-		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-		if (isMobile) {
-		// Adicionar um evento de clique na página
-		document.addEventListener("click", function() {
-			meuAudio.play();
-		});
-		} else {
-		// Se não for um dispositivo móvel, reproduza automaticamente
-		meuAudio.autoplay = true;
-		meuAudio.play();
-		}
-		</script>
+		<audio src="assets/audio/Lennon.mp3" controls autoplay loop></audio>
 		<!-- Formulário de Login -->
 		<h1>&ensp;</h1>
 		<div class="login-form">
@@ -91,5 +67,17 @@
 			<div class="signin"><input type="submit" value="Eu aceito! &#10084;" id="submit" onclick="validate()" ></div>
 		</div>
  		<div class="copy-rights"><p></a> </p></div>
+		 <script>
+			window.onload = function() { document.body.className = ''; }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+			$(document).ready(function(c) {
+				$('.close').on('click', function(c){
+					$('.login-form').fadeOut('slow', function(c){
+						  $('.login-form').remove();
+					});
+				});
+			});
+			</script>
 	</body>
 </html>
