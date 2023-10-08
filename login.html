@@ -48,7 +48,7 @@
 	</head>
 	<body>
 		<!-- Música de Fundo -->
-		<audio src="assets/audio/Lennon.mp3" controls autoplay loop></audio>
+		<audio id="meuAudio" src="assets/audio/Lennon.mp3" controls autoplay loop></audio>
 		<script>
 		$(document).ready(function(c) {
 			$('.close').on('click', function(c){
@@ -57,6 +57,21 @@
 				});
 			});
 		});
+		var meuAudio = document.getElementById("meuAudio");
+
+		// Verificar se o dispositivo é móvel
+		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+		if (isMobile) {
+		// Adicionar um evento de clique na página
+		document.addEventListener("click", function() {
+			meuAudio.play();
+		});
+		} else {
+		// Se não for um dispositivo móvel, reproduza automaticamente
+		meuAudio.autoplay = true;
+		meuAudio.play();
+		}
 		</script>
 		<!-- Formulário de Login -->
 		<h1>&ensp;</h1>
